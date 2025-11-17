@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        TUGAS WEB DESIGN form Pendaftaran Atlit Sepak Bola,
+        Kategori Web OlahRaga.
+
+        Anggota Kelompok:
+        1. Cassiel Dannyala Ferdinand || Nim: 06023032
+        2. Siti Shalu Prilia || Nim: 06023015
+        3. Muhammad Vico Lacosto || Nim: 06023033
+
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tugas Web Desain Membuat Form Pendaftaran dengan kategiri Olah Raga. Form Pendaftaran Atlit Sepak Bola! ">
+        <meta name="author" content="Cassiel D. Ferdinand">
+        <title>PENDAFTARAN ATLIT SEPAK BOLA - Olah Raga | WEB DESAIN</title>
+        <!--JAVASCRIPT-->
+        <script type="text/javascript">
+            function check(){
+            nama = document.getElementById('nama').value;
+            identitas = document.getElementById('identitas').value;
+            notelp = document.getElementById('notelp').value;
+            usia = document.getElementById('usia').value;
+            tinggi = document.getElementById('tinggi').value;
+            berat = document.getElementById('berat').value;
+            kelamin = document.getElementById('kelamin').value;
+            tmptlahir = document.getElementById('tmptlahir').value;
+            tgllahir = document.getElementById('tgllahir').value;
+            agama = document.getElementById('agama').value;
+            alamat = document.getElementById('alamat').value;
+            posisi = document.getElementById('posisi').value;
+            punggung = document.getElementById('punggung').value;
+
+            if(nama==''||nama==null){
+                document.getElementById('id_nama').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(identitas==''||identitas==null){
+                document.getElementById('id_identitas').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(notelp==''||notelp==null){
+                document.getElementById('id_notelp').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(usia==''||usia==null){
+                document.getElementById('id_usia').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(tinggi==''||tinggi==null){
+                document.getElementById('id_tinggi').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(berat==''||berat==null){
+                document.getElementById('id_berat').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(kelamin==''||kelamin=='-'||kelamin==null){
+                document.getElementById('id_kelamin').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(tmptlahir==''||tmptlahir==null){
+                document.getElementById('id_tmptlahir').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(tgllahir==''||tgllahir==null){
+                document.getElementById('id_tgllahir').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(agama==''||agama=='-'||agama==null){
+                document.getElementById('id_agama').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(alamat==''||alamat==null){
+                document.getElementById('id_alamat').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(posisi==''||posisi==null){
+                document.getElementById('id_posisi').innerHTML="*Wajib Diisi";
+                return false;
+            }
+            if(punggung==''||punggung==null){
+                document.getElementById('id_punggung').innerHTML="*Wajib Diisi";
+                return false;
+            }
+
+            if(nama != '' &&
+            identitas != '' &&
+            notelp != '' &&
+            usia != '' &&
+            tinggi != '' &&
+            berat != '' &&
+            kelamin != '' &&
+            tmptlahir != '' &&
+            tgllahir != '' &&
+            agama != '' &&
+            alamat != '' &&
+            posisi != '' &&
+            punggung != ''){
+                var outputContent = "<strong>Nama Lengkap:</strong> "+nama+
+                "<br><strong>No. Identitas:</strong> "+identitas+
+                "<br><strong>No. Telphone:</strong> "+notelp+
+                "<br><strong>Usia:</strong> "+usia+" tahun"+
+                "<br><strong>Tinggi Badan:</strong> "+tinggi+" cm"+
+                "<br><strong>Berat Badan:</strong> "+berat+" Kg"+
+                "<br><strong>Jenis Kelamin:</strong> "+kelamin+
+                "<br><strong>Tempat Lahir:</strong> "+tmptlahir+
+                "<br><strong>Tanggal Lahir:</strong> "+tgllahir+
+                "<br><strong>Agama:</strong> "+agama+
+                "<br><strong>Alamat Rumah:</strong> "+alamat+
+                "<br><strong>Posisi Bermain:</strong> "+posisi+
+                "<br><strong>Nomor Punggung:</strong> "+punggung;
+
+                document.getElementById('output').innerHTML = outputContent;
+
+                showPopup();
+                return false;
+
+            }
+        }
+
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            var outputContent = document.getElementById('output').innerHTML;
+            document.getElementById('OutputData').innerHTML = outputContent;
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+        </script>
+        <!--CSS-->
+        <style>
+            body{
+                /**background-color: white;**/
+                background-image: url(./assets/img/bg-daftar.jpeg);
+                background-size: calc(100%);
+                background-position: calc(80%);
+                
+            }
+            .container{
+                display: block;
+                
+            }
+            .tag-atas{
+                background-image: url(https://img.freepik.com/premium-photo/soccer-ball-green-grass-soccer-field-generative-ai_220873-19655.jpg);
+                background-position: calc(30%);
+                background-size: calc(120%);
+                width: 40%;
+                height: 130px;
+                background-color: white;
+                border-radius: 20px;
+                margin-bottom: 60px;
+                margin-top: -50px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .tag-atas h1{
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 30px;
+                font-size: 30px;
+                letter-spacing: 1px;
+                color: white;
+                font-family: sans-serif;
+            }
+            .tag-atas h3{
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 5px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            .pendaftaran{
+                width: 560px;
+                height: 1400px;
+                margin: auto;
+                background-color: white;
+                border-radius: 20px;
+            }
+            p{
+                text-align: left;
+                padding: 10px 10px;
+                font-size: 26px;
+                color: black;
+                letter-spacing: 0.8px;
+            }
+            form{
+                width: 520px;
+                text-align: center;
+                margin-left: 20px;
+            }
+            form label{
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 6px;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+                color: black;
+                font-family: sans-serif;
+            }
+            form .input{
+                width: 100%;
+                padding: 14px;
+                border: none;
+                border: 1px solid black;
+                border-radius: 8px;
+                outline: none;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            button{
+                background-color: black;
+                color: #fff;
+                width: 220px;
+                height: 45px;
+                font-size: 16px;
+                padding: 12px;
+                border-radius: 8px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin-top: 30px;
+                border: none;
+            }
+            form div{
+                text-align: right;
+                margin-right: 10px;
+                margin-top: 4px;
+                color: red;
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+
+            #popup {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            #popup-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <!--BADAN-->
+    <body>
+        <br><br><br><br><br>
+        <div class="container">
+            <div class="tag-atas">
+                <h1>Pendaftaran Atlit Sepak Bola</h1>
+                <h3>Tanri Abeng University</h3>
+            </div>
+            <div class="pendaftaran">
+                <br>
+                <form onsubmit="return check();">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="" class="input">
+                    <div id="id_nama"></div>
+
+                    <label>No. Identitas</label>
+                    <input type="number" id="identitas" class="input">
+                    <div id="id_identitas"></div>
+
+                    <label>No. Telphone</label>
+                    <input type="number" id="notelp" class="input">
+                    <div id="id_notelp"></div>
+
+                    <label>Usia</label>
+                    <input type="number" id="usia" class="input">
+                    <div id="id_usia"></div>
+
+                    <label>Tinggi Badan</label>
+                    <input type="number" id="tinggi" class="input">
+                    <div id="id_tinggi"></div>
+
+                    <label>Berat Badan</label>
+                    <input type="number" id="berat" class="input">
+                    <div id="id_berat"></div>
+
+                    <label>Jenis Kelamin</label>
+                    <select name="" id="kelamin" class="input">
+                        <option value="-"> </option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                    <div id="id_kelamin"></div>
+
+                    <label>Tempat Lahir</label>
+                    <input type="text" id="tmptlahir" class="input">
+                    <div id="id_tmptlahir"></div>
+
+                    <label>Tanggal Lahir</label>
+                    <input type="date" id="tgllahir" class="input">
+                    <div id="id_tgllahir"></div>
+
+                    <label>Agama</label>
+                    <select name="" id="agama" class="input">
+                        <option value="-"> </option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Khonghucu">Khonghucu</option>
+                    </select>
+                    <div id="id_agama"></div>
+
+                    <label>Alamat Rumah</label>
+                    <input type="text" id="alamat" class="input">
+                    <div id="id_alamat"></div>
+
+                    <label>Posisi Bermain</label>
+                    <input type="text" id="posisi" placeholder="" class="input">
+                    <div id="id_posisi"></div>
+
+                    <label>Nomor Punggung</label>
+                    <input type="number" id="punggung" placeholder="" class="input">
+                    <div id="id_punggung"></div>
+
+                    <button onclick="showPopup()">Daftar</button>
+                    <div id="output" hidden></div>
+                    <button type="reset">Reset</button>
+                </form>
+                
+                    <!-- Popup -->
+                    <div id="popup">
+                        <div id="popup-content">
+                            <p id="OutputData"></p>
+                            <button onclick="closePopup()">Tutup</button>
+                        </div>
+                    </div>
+
+                <br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
